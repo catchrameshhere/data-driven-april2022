@@ -1,0 +1,24 @@
+name: Regression-Suite-YAML
+threadCount: 5
+parallel: tests
+parameters:
+  {
+    validUsername: dan@gmail.com,
+    validPassword: test1234,
+    invalidUsername: dan@gmail.com,
+    invalidPassword: test1234,
+  }
+
+tests:
+  - name: Chrome Test
+    parameters: { browser: chrome, count: 10 }
+    packages:
+      - test
+  - name: Firefox Test
+    parameters: { browser: firefox, count: 10 }
+    packages:
+      - test
+  - name: Edge Test
+    parameters: { browser: edge, count: 10 }
+    packages:
+      - test
