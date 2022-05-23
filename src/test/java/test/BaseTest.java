@@ -24,6 +24,7 @@ public class BaseTest {
 		driver = common.getDriverObject();
 	}
 
+	//enable this while running the test
 	@AfterTest
 	public void afterTest() {
 		//	  common.quitBrowser();
